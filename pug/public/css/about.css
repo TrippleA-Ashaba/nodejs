@@ -1,0 +1,173 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body {
+	background: rgba(129, 58, 3, 0.753);
+}
+.main-content {
+	padding: 40px 50px;
+}
+/* ############## NavBar ##################### */
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	font-size: 20px;
+}
+.logo {
+	color: rgb(0, 0, 0);
+	font-size: 28px;
+	cursor: pointer;
+}
+span {
+	color: #3a1400;
+}
+.logo a {
+	color: #ffffff;
+	font-size: 45px;
+	text-decoration: none;
+}
+.navbar ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px 20px;
+}
+.navbar ul li a {
+	color: white;
+
+	text-decoration: none;
+	font-weight: bold;
+}
+.menu ul li a:hover {
+	color: #3a1400;
+
+	transition: 0.3s;
+}
+.login .btn {
+	border: none;
+	background: rgba(129, 58, 3, 0.76);
+	border-radius: 30px;
+	color: #fff;
+	padding: 12px 30px;
+	font-size: 15px;
+	transition: 0.4s;
+}
+.btn:hover {
+	background: #3a1400;
+	transform: scale(0.9);
+}
+
+/* ############ CONTENT #################### */
+
+.header {
+	text-align: center;
+	margin-top: 50px;
+	background-image: url(../images/about-hero.jpg);
+	background-position: -1300px;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+}
+
+.coffee {
+	font-size: 120px;
+}
+.every {
+	font-size: 50px;
+}
+.every span {
+	color: #3a1400;
+	font-size: 30px;
+}
+.heather {
+	font-size: 30px;
+	color: #3a1400;
+}
+.about {
+	margin-top: 50px;
+	line-height: 40px;
+}
+.about img {
+	float: right;
+	width: 700px;
+	margin: 40px;
+	border-radius: 10px;
+}
+p {
+	font-size: 20px;
+	padding-top: 20px;
+}
+.rule {
+	margin-top: 20px;
+	height: 5px;
+	width: 100%;
+	background: brown;
+	text-align: center;
+}
+.team h1 {
+	text-align: center;
+	font-size: 50px;
+	margin: 20px 0;
+}
+.teams-prof {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.teams-prof img {
+	width: 200px;
+	border-radius: 100%;
+}
+.teams-prof p {
+	padding: 0;
+}
+.name {
+	font-size: 30px;
+}
+.teams {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+}
+.brew-team {
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.brew-team img {
+	width: 700px;
+	border-radius: 10px;
+}
+.brew {
+	padding: 0 20px;
+}
+
+/* footer */
+footer {
+	background-color: rgba(158, 107, 12, 0.668);
+	padding: 20px;
+}
+.footer {
+	display: flex;
+	justify-content: space-between;
+	margin: 40px;
+	color: rgba(0, 0, 0, 0.76);
+}
+.footer a {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.615);
+}
+.footer li {
+	list-style-type: none;
+	margin-top: 10px;
+}
+.logo img {
+	width: 250px;
+	border-radius: 10px;
+}
+footer p {
+	text-align: center;
+	font-size: 16px;
+}
