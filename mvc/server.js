@@ -3,13 +3,14 @@ const path = require("path");
 const mongoose = require("mongoose");
 const config = require("./config/db");
 const passport = require("passport");
-
 //express sesssion
 const expressSession = require("express-session")({
 	secret: "secret",
 	resave: false,
 	saveUninitialized: false,
 });
+// import user model
+const Registration = require("./models/User");
 
 // Importing route files
 const registrationRoutes = require("./routes/register_routes");
@@ -46,6 +47,9 @@ app.use(expressSession);
 // passport configuration
 app.use(passport.initialize());
 app.use(passport.session());
+passport.use(Registration.createStrategy());
+passport.serializeUser(Registration.serializeUser());
+passport.deserializeUser(Registration.deserializeUser());
 
 // ======================================================= Routing ===================================
 // Routes  anatomy of express server

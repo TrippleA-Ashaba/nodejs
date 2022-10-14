@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const userSchema = new mongoose.Schema({
 	fullname: {
@@ -32,3 +33,9 @@ const userSchema = new mongoose.Schema({
 		trim: true,
 	},
 });
+
+userSchema.plugin(passportLocalMongoose, {
+	usernameField: "uniquenumber",
+});
+
+module.exports = mongoose.model("Registration", userSchema);
