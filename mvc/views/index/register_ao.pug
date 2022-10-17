@@ -13,7 +13,7 @@ block content
                 input.form-control(name="email" id="mail")
             div.col.form-group
                 label Unique Number
-                input.form-control(name="uniquenumber" id="uniquenumber")
+                input.form-control(name="uniquenumber" id="uniquenumber" auto-complete="off")
         div.form-row
             div.col.form-group
                 label.form-check.form-check-inline
@@ -30,6 +30,9 @@ block content
                 select.form-control(name="role")
                     option(value="") (Select a role)
                     option(value="AgricOfficer") Agric Officer
+                    option(value="FarmerOne") Farmer One
+                    option(value="UrbanFarmer") Urban Farmer
+
         div.form-row
             div.col.form-group
                 button.btn.btn-primary.btn-block( id="submit") Register 

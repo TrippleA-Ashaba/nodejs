@@ -58,6 +58,8 @@ app.use("/user", registrationRoutes);
 //coffee
 app.use("/coffee", coffeeRoutes);
 
+app.use("/fo", registrationRoutes);
+
 // Invalid Routes
 app.get("*", (req, res) => {
 	res.send(
