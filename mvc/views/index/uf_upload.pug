@@ -1,0 +1,41 @@
+extends layout
+block content
+    header.card-header
+        //- script(src="js/validations.js")
+        h4.card-title Farmer One Upload
+    form(action='/uf/upload' id="uploadForm" name="ufupload" enctype="multipart/form-data" method="POST")
+        div.form-row
+            div.col.form-group
+                label Unique Number
+                //- input.form-control(name="uniquenumber" id="uniquenumber" auto-complete="off")
+                select.form-control(name="uniquenumber" id="uniquenumber" auto-complete="off")
+                    each UrbanFarmer in UrbanFarmers 
+                        option(value=UrbanFarmer._id) #{UrbanFarmer.fullname}
+            div.col.form-group
+                label Email
+                input.form-control(name="email" id="mail")
+            div.col.form-group
+                label Name 
+                input.form-control(name="producename" id="pname" )
+
+            div.col.form-group
+                label Type
+                select.form-control(name="producetype")
+                    option(value="") (Select type )
+                    option(value="Horticulture") Horticulture
+                    option(value="Dairy") Dairy
+                    option(value="Poultry") Poultry
+
+        .form-group 
+            label Upload 
+            input.form-control(type="file" name="produceimg")
+
+
+        div.form-row
+            div.col.form-group
+                button.btn.btn-primary.btn-block( id="submit") Upload
+        //- div.form-row
+        //-     div.col.form-group
+        //-         a(class='button' href='/login') Login
+block footer
+    div.col-md-12 ©️ 2022 Refactory Cohort 12, NodeJS by Irene.

@@ -15,6 +15,7 @@ const Registration = require("./models/User");
 // Importing route files
 const registrationRoutes = require("./routes/register_routes");
 const coffeeRoutes = require("./routes/coffee_routes");
+const ufRoutes = require("./routes/uf_routes");
 
 // instantiate
 const app = express();
@@ -59,6 +60,8 @@ app.use("/user", registrationRoutes);
 app.use("/coffee", coffeeRoutes);
 
 app.use("/fo", registrationRoutes);
+
+app.use("/uf", ufRoutes);
 
 // Invalid Routes
 app.get("*", (req, res) => {
